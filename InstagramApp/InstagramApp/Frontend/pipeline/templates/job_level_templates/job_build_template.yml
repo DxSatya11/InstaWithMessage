@@ -1,0 +1,50 @@
+parameters:
+  - name: buildName
+    type: string
+  - name: projectFolder
+    type: string
+  - name: buildOutputFolder
+    type: string
+  - name: vmImageName
+    type: string
+
+jobs:
+  - job: 'build_test_${{ parameters.buildName }}'
+    displayName: 'build  and test ${{ parameters.buildName }}'
+    pool:
+      vmImage: ${{ parameters.vmImageName}}
+    steps:
+
+  
+      - task: Npm@1
+        displayName: npm install
+        inputs:
+          workingDir: ${{parameters.projectFolder}}
+          verbose: true
+      - task: Npm@1
+        displayName: build
+        inputs:
+          command: custom
+          workingDir: ${{parameters.projectFolder}}
+          verbose: true
+          customCommand: run build
+      - task: Npm@1
+        displayName: npm unit tests
+        inputs:
+          workingDir: ${{parameters.projectFolder}}
+          verbose: true
+          customCommand: run coverage
+
+      - task: CopyPublishBuildArtifacts@1
+        inputs:
+          CopyRoot: '${{parameters.buildOutputFolder}}'
+          Contents: '**'
+          ArtifactName: 'drop'
+          ArtifactType: 'Container'
+        
+      - task: DownloadBuildArtifacts@1
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'drop'
+          downloadPath: '${{parameters.buildOutputFolder}}'

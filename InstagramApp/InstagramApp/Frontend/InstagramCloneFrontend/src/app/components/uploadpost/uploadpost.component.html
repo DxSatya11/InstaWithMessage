@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uploadpost.component.css">
+    <title>Upload</title>
+</head>
+<body>
+<div class="upload-post-container">
+    <form [formGroup]="userForm" (ngSubmit)="uploadPost(userId)"> 
+      <label for="post">Choose file</label>
+      <input type="file" (change)="onFileSelectedtoUpload($event)" formControlName="post" class="file-input">
+      <button type="submit" class="upload-button">Upload</button>
+    </form>
+
+    <div class="fixed-home-container">
+      <div class="inline-text" [routerLink]="['/userhomepage', userId]">
+          <div class="image-container">
+              <img src="../../../../assets/Home.jpg" alt="Home">
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- userregistration.component.html -->
+<div class="login-container">
+    <h2>Instagram Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+        <div class="logo-container">
+            <img src="../../../../assets/InstagramLogo.jpg" alt="Username or Email Icon" class="logo">
+        </div>
+        <label for="userdata">UserName or Email:</label>
+        <input type="text" formControlName="userdata" placeholder="Enter your username or email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" placeholder="Enter your password" required>
+
+        <button type="submit">Log In</button>
+    </form>
+
+    <p class="signup-link"> If you don't have an ID?<a routerLink="/register">Sign Up</a>
+    </p>
+</div>

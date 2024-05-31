@@ -1,0 +1,45 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - Backend
+
+pool:
+  vmImage: "windows-latest"
+
+
+    
+stages:
+  - stage: Build
+    jobs:
+      - job: Build
+        steps:
+          - template: Templates/build-backend.yml
+            # parameters:
+            #   solution: Satya/InstagramApp/Backend/InstagramClone/InstagramClone/*.csproj
+            #   path: Satya/InstagramApp/Backend/InstagramClone/Instagram.Azure.Deployment
+          - template: Templates/validate-resourcegroupdeployment.yml
+            parameters:
+              resourcegroup: instarg
+              path: Satya/InstagramApp/Backend/InstagramClone/Instagram.Azure.Deployment
+              template: azuredeploy.bicep
+              templateParameters: azuredeploy.parameters.dev.json
+              serviceConnection: InstaService
+
+
+  - stage: Dev
+    displayName: Deploy To Dev
+    dependsOn: Build
+    jobs:
+      - template: Templates/deploy-instagramservice.yml
+        parameters:
+          env: dev
+          webAppName : "instagramclone-service-backend"
+          resourceGroup: instarg
+          serviceConnection: InstaService
+          subscriptionId: '82573c7d-8b1a-4ab0-a481-b40962a1c949'
+
+ 

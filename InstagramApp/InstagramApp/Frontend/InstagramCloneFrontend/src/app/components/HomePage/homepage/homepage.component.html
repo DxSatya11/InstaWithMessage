@@ -1,0 +1,39 @@
+<!-- homepage.component.html -->
+
+<div class="top-fixed-row">
+  <div class="inline-text" [routerLink]="['/suggesttofollow', userId]">
+    <img src="../../../../assets/Suggestion.jpg" alt="suggest">
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="instagram-container">
+  
+  <div class="post-container" *ngFor="let post of posts; let i = index">
+    <div class="user-info">
+      <img [src]="profilepicture[i]" alt="Profile Picture" class="profile-picture">
+      <span class="username">{{ username[i] }}</span>
+    </div>
+    <img [src]="post" alt="Post Image" class="post-image">
+  </div>
+
+
+  <div class="inner-container">
+    <div class="bottom-border">
+        <div class="inline-text" [routerLink]="['/userhomepage', userId]">
+            <img src="../../../../assets/Home.jpg" alt="Home">
+          </div> 
+      <div class="inline-text"><img src="../../../../assets/Search.jpg" alt="Search"></div>
+
+      <div class="inline-text" [routerLink]="['/uploadpost', userId]">
+        <img src="../../../../assets/UploadPost.jpg" alt="Upload">
+      </div>
+
+      <div class="inline-text" [routerLink]="['/userprofil', userId]">
+        <img src="../../../../assets/Profil.jpg" alt="Profil">
+      </div>
+    </div>
+  </div>
+</div>

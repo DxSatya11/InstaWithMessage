@@ -1,0 +1,29 @@
+<!-- suggesteduser.component.html -->
+
+<div class="suggested-users-container">
+  <br>
+  <div class="search-container">
+    <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterUsers()">
+  </div>
+    <div *ngFor="let user of username; let i = index" class="suggested-user">
+      <div class="profile-picture">
+        <img [src]="profilepicture[i]" alt="Profile Picture">
+      </div>
+      <div class="user-details">
+        <span>{{ user }}</span>
+        
+
+        <button (click)="followUser(userid[i])" class="follow-button">
+          <img src="../../../../assets/FollowUser.png" alt="Follow" class="follow-icon">
+        </button>
+      </div>
+    </div>
+
+    <div class="fixed-home-container">
+        <div class="inline-text" [routerLink]="['/userhomepage', userId]">
+            <div class="image-container">
+                <img src="../../../../assets/Home.jpg" alt="Home">
+            </div>
+        </div>
+    </div>
+</div>

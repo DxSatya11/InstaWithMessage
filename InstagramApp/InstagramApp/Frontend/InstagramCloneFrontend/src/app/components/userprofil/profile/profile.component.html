@@ -1,0 +1,42 @@
+<!-- profile.component.html -->
+<!-- profile.component.html -->
+<div [ngClass]="darkMode ? 'dark-mode profile-container' : 'profile-container'">
+
+  <button class="dark-mode-toggle" (click)="toggleDarkMode()">
+    <img src="../../../../assets/DarkMode.jpg" alt="Dark Mode Toggle">
+  </button>
+  <div class="profile-header">
+    <img [src]="profilepicture" alt="Profile Picture" class="profile-picture">
+    <div class="profile-info">
+      <h2 class="username"><strong>{{ username }}</strong></h2>
+      <p class="given-name">{{ givenname }}</p>
+      <p class="bio">{{ bio }}</p>
+    </div>
+  </div>
+
+  <div class="followers-following">
+    <div class="followers-following-text">
+      <span class="followers-label">Followers</span>
+      <span class="following-label">Following</span>
+    </div>
+    <div class="followers-following-count">
+      <span class="followers-count">{{ followers }}</span>
+      <span class="following-count">{{ following }}</span>
+    </div>
+  </div>
+ 
+  <div class="inline-header">
+  </div>
+  <div class="posts-container">
+    <div class="post" *ngFor="let post of posts">
+      <img [src]="post.userPosts" alt="Post Image">
+    </div>
+  </div>
+
+  <div class="inline-text" [routerLink]="['/userhomepage', userId]">
+    <div class="image-container">
+      <img src="../../../../assets/Home.jpg" alt="Home">
+    </div>
+  </div>
+  
+</div>

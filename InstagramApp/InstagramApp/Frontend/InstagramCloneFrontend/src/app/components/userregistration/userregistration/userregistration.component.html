@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userregistration.component.css">
+    <title>Registr</title>
+</head>
+<body>
+    <!-- userregistration.component.html -->
+<div class="registration-container">
+    <h2>Instagram Registration</h2>
+    <form [formGroup]="userForm" (ngSubmit)="userRegistration()">
+      <label for="username">Username:</label>
+      <input type="text" formControlName="userName" required>
+  
+      <label for="givenName">Given Name:</label>
+      <input type="text" formControlName="givenName" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" required>
+  
+      <label for="dob">Date of Birth:</label>
+      <input type="date" formControlName="dob" required>
+  
+      <label for="contactNo">Contact Number:</label>
+      <input type="tel" formControlName="contactNo" pattern="[0-9]{10}" required>
+  
+      <label for="country">Country:</label>
+      <input type="text" formControlName="country">
+   
+      <label for="bio">Bio:</label>
+      <textarea formControlName="bio" maxlength="500"></textarea>
+  
+      <label for="ProfilPicture">Profile Picture:</label>
+      <!-- <input type="file" (click)="onFileSelected($event)" formControlName="profilePicture" required> -->
+      <input type="file" (change)="onFileSelected($event)" formControlName="ProfilPicture">
+
+
+  
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  
+</body>
+</html>

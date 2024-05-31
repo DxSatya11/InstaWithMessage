@@ -1,0 +1,200 @@
+/* profile.component.css */
+.profile-container {
+    max-width: 380px;
+    /* min-width: 400px; */
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .inline-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .username {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .given-name {
+    margin: 5px 0;
+  }
+  
+  .bio {
+    margin: 5px 0;
+  }
+  
+  .posts-container {
+    flex-grow: 1;
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .post img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .inner-container {
+    margin-top: auto;
+  }
+
+  .bottom-border {
+    width: 95.5%;
+    background-color:lightblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    display: flex; 
+    justify-content: space-around; 
+    font-weight: bold;
+  }
+
+  .inline-text img {
+    width: 40px; 
+    height: 40px; 
+}
+
+.username {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold; 
+  }
+
+ /* profile.component.css */
+:root {
+  --background-color: #ffffff; /* Default light mode background color */
+  --text-color: #000000; /* Default light mode text color */
+}
+
+.dark-mode {
+  background-color: #121212; /* Dark mode background color */
+  color: #ffffff; /* Dark mode text color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode-toggle img {
+  width: 40px; 
+  height: 40px; 
+}
+
+
+.followers-following {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.followers-following-text {
+  font-size: 1em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.followers-count, .following-count,
+.followers-label,
+.following-label {
+  font-weight: bold;
+  /* Instagram's color for counts */
+}
+
+.followers-label {
+  color:var(--text-color); /* Color for the labels */
+  margin-left: 60px;
+ 
+}
+
+.following-label {
+  color:var(--text-color); /* Color for the "Following" label */
+  margin-right: 60px;
+}
+
+.followers-following-count {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin-top: 8px; /* Adjust as needed for spacing between labels and counts */
+}
+
+.inline-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  height: 60px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Add this style to make the content scrollable */
+.posts-container {
+  overflow-y: auto;
+}
+
+.posts-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+
+
+  
+  

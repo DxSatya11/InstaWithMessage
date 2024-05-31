@@ -1,0 +1,73 @@
+.upload-post-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px; /* Optional: Add some padding to the input */
+}
+
+.upload-button {
+    width: 100%;
+    padding: 10px; /* Optional: Add some padding to the button */
+    background-color: #4caf50; /* Optional: Add a background color */
+    color: #fff; /* Optional: Set text color to white */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Optional: Add hover effect to the button */
+.upload-button:hover {
+    background-color: #45a049;
+}
+
+.fixed-home-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 30%;
+    background-color: rgb(98, 107, 110);
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    z-index: 1;
+
+    
+    @media only screen and (max-width: 600px) {
+        width: 100%; 
+        max-width: none; 
+      }
+}
+
+.inline-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+

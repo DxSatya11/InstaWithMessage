@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "plXHaOMoPFAtdZA/6/aPsNS8ZeG+PV69vjW9L1GQQFFfTvAZy4IzXmRuln+FF+EkO4t+0J1xD+gUEg/ZGCIhrQ==",
+  "success": true,
+  "projectFilePath": "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\azure.storage.blobs\\12.19.0\\azure.storage.blobs.12.19.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\azure.storage.common\\12.18.0\\azure.storage.common.12.18.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.io.hashing\\6.0.0\\system.io.hashing.6.0.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

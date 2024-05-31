@@ -1,0 +1,49 @@
+parameters:
+  - name: serviceConnection
+    type: string
+  - name: subscriptionId
+    type: string
+  - name: resourceGroup
+    type: string
+  - name: env
+    type: string
+    values:
+    - dev
+  - name: webAppName
+    type: string
+
+
+jobs:
+  - deployment: DeployInstagramCloneService
+    displayName: Deploy Instagram service
+    environment: instadev
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - download: current
+              artifact: drop
+              patterns: '**/*'
+            - task: AzureResourceManagerTemplateDeployment@3
+              displayName: "ARM Template deployment: Instagram Service"
+              inputs:
+                azureResourceManagerConnection: ${{parameters.serviceConnection}}
+                # subscriptionId: ${{parameters.subscriptionId}}
+                # resourceGroupName: ${{parameters.resourceGroup}}
+                subscriptionId: '82573c7d-8b1a-4ab0-a481-b40962a1c949'
+                resourceGroupName: "instarg"
+                location: "Central India"
+                csmFile: "$(Pipeline.Workspace)/drop/Templates/azuredeploy.bicep"
+                csmParametersFile: "$(Pipeline.Workspace)/drop/Templates/azuredeploy.parameters.${{parameters.env}}.json"
+                deploymentOutputs: instagramserviceoutput
+
+            - task: AzureRmWebAppDeployment@4
+              displayName: 'Azure App Service Deploy: Instagram service'
+              inputs:
+                azureSubscription:  ${{parameters.serviceConnection}}
+                DeploymentType: zipDeploy
+                WebAppName: ${{parameters.webAppName}}
+                Package: '$(Pipeline.Workspace)/drop/InstagramClone.zip'
+                enableCustomDeployment: true
+                RemoveAdditionalFilesFlag: true
+

@@ -1,0 +1,38 @@
+parameters:
+  - name: environment
+    type: string
+    values:
+      - instadev
+      
+  - name: serviceConnection
+    type: string
+  - name: subscriptionId
+    type: string
+  - name: appType
+    type: string
+  - name: appName
+    type: string       
+  - name: displayname
+    type: string
+  - name: Artifacts
+    type: string
+
+stages:
+- stage: ${{parameters.displayname}}
+  displayName: '${{parameters.environment}}: App deployment'       
+
+  jobs:
+    - deployment: DeployApp
+      displayName: DeployApp
+      environment: App-${{parameters.environment}}
+      strategy:
+        runOnce:
+          deploy:
+            steps: 
+              - task: AzureRmWebAppDeployment@4
+                inputs:
+                  ConnectionType: 'AzureRM'
+                  azureSubscription: ${{parameters.serviceConnection}}
+                  appType: ${{parameters.appType}}
+                  WebAppName: '${{parameters.appName}}'
+                  packageForLinux: '$(Pipeline.Workspace)/${{parameters.Artifacts}}/' 
