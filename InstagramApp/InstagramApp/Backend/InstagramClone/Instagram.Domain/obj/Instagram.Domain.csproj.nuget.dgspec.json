@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj": {}
+    "G:\\Instagram\\InstaWithMessage\\InstagramApp\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj": {
+    "G:\\Instagram\\InstaWithMessage\\InstagramApp\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj",
+        "projectUniqueName": "G:\\Instagram\\InstaWithMessage\\InstagramApp\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj",
         "projectName": "Instagram.Domain",
-        "projectPath": "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj",
-        "packagesPath": "C:\\Users\\SatyaPrakashPanda\\.nuget\\packages\\",
-        "outputPath": "C:\\Training\\Interns-BE\\Satya\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\obj\\",
+        "projectPath": "G:\\Instagram\\InstaWithMessage\\InstagramApp\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\Instagram.Domain.csproj",
+        "packagesPath": "C:\\Users\\SATYA PRAKASH PANDA\\.nuget\\packages\\",
+        "outputPath": "G:\\Instagram\\InstaWithMessage\\InstagramApp\\InstagramApp\\Backend\\InstagramClone\\Instagram.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SatyaPrakashPanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SATYA PRAKASH PANDA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

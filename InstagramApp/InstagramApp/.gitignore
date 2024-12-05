@@ -118,8 +118,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-*.angular
-*.vscode
 
  
 
